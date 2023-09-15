@@ -39,14 +39,15 @@ export function Register() {
             return false;
         } 
 
-        for (const word of nameWords) {
-            if (!/^[A-Z][a-z]*$/.test(word)) {
-                return false;
-            }
-        }
+        // for (const word of nameWords) {
+        //     if (!/^[A-Z][a-z]*$/.test(word)) {
+        //         return false;
+        //     }
+        // }
 
         return true;
     }
+    
 
     function isValidFullname() {
         const minFullnameSize = 3;
