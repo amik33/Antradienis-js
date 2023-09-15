@@ -1,26 +1,8 @@
 import { useContext } from 'react';
-// import { Link } from 'react-router-dom';
 import { GlobalContext } from '../../context/GlobalContext';
 
 export function SellerTotalTable() {
-    const { total, deleteTotal } = useContext(GlobalContext);
-
-    // function deleteTotalHandler(title) {
-    //     fetch('http://localhost:3001/api/total/' + title, {
-    //         method: 'DELETE',
-    //         headers: {
-    //             Accept: 'application/json',
-    //         },
-    //         credentials: 'include',
-    //     })
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             if (data.status === 'ok') {
-    //                 deleteTotal(title);
-    //             }
-    //         })
-    //         .catch();
-    // }
+    const { total } = useContext(GlobalContext);
 
     return (
         <div className="table-responsive">
@@ -28,8 +10,7 @@ export function SellerTotalTable() {
                 <thead>
                     <tr>
                         <th scope="col">Act</th>
-                        <th scope="col">Total</th>
-                        {/* <th className="text-end" scope="col">Actions</th> */}
+                        <th className="text-center" scope="col">Total</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -37,11 +18,7 @@ export function SellerTotalTable() {
                        total.map((tot, i) => (
                             <tr key={tot}>
                                 <td>{i + 1}</td>
-                                <td>{tot}</td>
-                                {/* <td className="d-flex gap-2 justify-content-end">
-                                    <Link className="btn btn-warning pe-3 rounded-pill" to={`/total/${tot}/edit`}>Edit</Link>
-                                    <button onClick={() => deleteTotalHandler(tot)} className="btn btn-danger rounded-pill" type="button">Delete</button>
-                                </td> */}
+                                <td className="text-center">{tot}</td>
                             </tr>
                         ))
                     }

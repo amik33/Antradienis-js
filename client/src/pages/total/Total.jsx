@@ -5,7 +5,7 @@ import { TotalTable } from "../../components/total-table/TotalTable";
 import { SellerTotalTable } from "../../components/total-table/SellerTotalTable";
 import { Title } from "../../components/Title";
 
-export function AdminTotal() {
+export function Total() {
     const { role } = useContext(GlobalContext);
 
     if (role === 'admin') {
